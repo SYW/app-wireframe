@@ -1,0 +1,33 @@
+﻿@model SywApplicationWireframe.Web.UI.Controllers.LandingModel
+
+@{
+    ViewBag.Title = "Landing";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Landing</h2>
+
+<p>This is a wireframe for an application which includes the basic elements you need in order to start developing an application using the <a href="http://platform.shopyourway.com" target="_blank">ShopYourWay Platform</a></p>
+<p>Documentation of how to build an application is available at <a href="http://developer.shopyourway.com" target="_blank">ShopYourWay Developers site</a></p>
+<p>This application contains basic MVC architecture and platform APIs access</p>
+<p>Canvas is available via http://base-app-url/landing</p>
+
+@if (Model.DisplayProperConfiguraionMessage)
+{
+	<div class="error">
+		<h3>WAIT - before you start</h3>
+		<ul>
+			<li>Register a new application in <a href="http://galileo.shopyourway.com/app/control-panl" target="_blank">ShopYourWay Sandbox environment</a></li>
+			<li>After the application is registered succcessfully, you will get an app id and app secret (to use for accessing the <a href="http://platform.shopyourway.com" target="_blank">ShopYourWay Platform APIs</a>)</li>
+			<li>Set the app id and app secret in the web.config file under appSettings (<span class="bold">app:id</span> key and <span class="bold">app:secret</span> key)</li>
+			<li>Go to <span class="bold">http://galileo.shopyourway.com/app/{Your app id Here}/l</span> and watch the magic happens...</li>
+		</ul>
+	</div>	
+}
+else
+{
+    <p class="bold">Make sure your are viewing this page at <a href="@Model.LandingPageUrl" target="_top">your ShopYourWay application landing page</a></p>
+    <a href="@Model.LoginPageUrl" target="_top">Install App</a>	
+}
+
+

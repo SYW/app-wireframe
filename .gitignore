@@ -1,0 +1,28 @@
+#############################################################
+#             Visual Studio Auto Generated Files
+#############################################################
+*.suo
+*.sln.cache
+*.csproj.user
+trunk/net/src/**/bin/
+trunk/net/src/**/obj/
+sample/**/trunk/net/src/**/bin/
+sample/**/trunk/net/src/**/obj/
+out/
+bin/
+obj/
+
+#############################################################
+#             ReSharper Auto Generated Files
+#############################################################
+trunk/net/src/_[Rr]e[Ss]harper*
+trunk/net/src/**/_ReSharper.*
+*.[Rr]e[Ss]harper.user
+trunk/net/src/Ohio.*.ReSharper
+*.DotSettings.user
+
+#############################################################
+#                  Miscellaneous
+#############################################################
+*.sh
+.gitignore.backup

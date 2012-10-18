@@ -1,0 +1,37 @@
+﻿@model SywApplicationWireframe.Web.UI.Controllers.UserModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Regular canvas page</h2>
+
+<p>This is a regular canvas page. Can contain anything you want for your application</p> 
+<p>Every canvas (everyone of them!) receives a token for you to use to access the <a href="http://platform.shopyourway.com" target="_blank">ShopYourWay Platform APIs</a></p>
+<div class="exmple">
+	<h3>For example:</h3>
+	<div>
+		Using /users/current API the application now knows that you are:
+		<div class="user">
+			<a class-="image-link" href="@Model.ProfileUrl" target="_top"><img alt="@Model.Name image" src="@Model.ImageUrl"/></a>	
+            <div class="details">
+			    <div>Id: @Model.Id</div>
+				<div>Name: <a href="@Model.ProfileUrl" target="_top">@Model.Name</a></div>
+				<div>
+					@if (Model.Following.Any())
+					{
+						var oneOfFollowing = Model.Following.Last();
+					    <span>You follow @Model.Following.Count. one of them is <a href ="@oneOfFollowing.ProfileUrl">@oneOfFollowing.Name</a></span> 
+					}  
+					else
+					{
+						<span>You don't follow anybody</span>
+					}
+				</div>
+		    </div>
+		</div>
+	</div>
+</div>
+<p>To learn more about the ShopYourWay Platform APIs go to <a href="https://developer.shopyourway.com/display/platdev/The+API" target="_blank">ShopYourWay Developers site</a></p>
+<p>Canvas is available via http://base-app-url/</p>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SywApplicationWireframe.Web.UI", "SywApplicationWireframe.Web.UI\SywApplicationWireframe.Web.UI.csproj", "{3DB4F73F-11D5-47C7-A486-FBAC186A8961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Client", "Platform.Client\Platform.Client.csproj", "{28E8AFB6-D3D4-4EF5-A449-9F1429C84BED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SywApplicationWireframe.Domain", "SywApplicationWireframe.Domain\SywApplicationWireframe.Domain.csproj", "{8F5A9803-E430-4175-B662-1F7EC747DC36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DB4F73F-11D5-47C7-A486-FBAC186A8961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB4F73F-11D5-47C7-A486-FBAC186A8961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB4F73F-11D5-47C7-A486-FBAC186A8961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB4F73F-11D5-47C7-A486-FBAC186A8961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28E8AFB6-D3D4-4EF5-A449-9F1429C84BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28E8AFB6-D3D4-4EF5-A449-9F1429C84BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28E8AFB6-D3D4-4EF5-A449-9F1429C84BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28E8AFB6-D3D4-4EF5-A449-9F1429C84BED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F5A9803-E430-4175-B662-1F7EC747DC36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F5A9803-E430-4175-B662-1F7EC747DC36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F5A9803-E430-4175-B662-1F7EC747DC36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F5A9803-E430-4175-B662-1F7EC747DC36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

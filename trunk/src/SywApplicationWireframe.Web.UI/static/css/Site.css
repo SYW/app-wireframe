@@ -1,0 +1,13 @@
+﻿body { font-family: Trebuchet MS;}
+
+.bold { font-weight: bold}
+
+.error { color: red }
+
+.example { border: 1px solid black }
+
+.user { width: 500px;height: 100px; display: block}
+
+.user .image-link { float: right }
+.user img { height: 90px;width: 90px;  }
+.user .details { float:right }

@@ -1,0 +1,16 @@
+﻿@model SywApplicationWireframe.Web.UI.Controllers.PostLoginModel
+
+@{
+    ViewBag.Title = "Post login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Post Login</h2>
+
+<p>Users get to the post login page after they have logged in and the application is installed.</p>
+<p>Use this page for initial setup for the user in your application</p>
+<p>After your done remember to redirect the user to one of your canvas pages</p>
+
+<a href="@Model.CanvasPageUrl" target="_top">Continue to regular canvas page</a>
+
+<p>Canvas is available via https://base-app-url/post-login</p>
