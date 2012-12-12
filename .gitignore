@@ -4,10 +4,10 @@
 *.suo
 *.sln.cache
 *.csproj.user
-trunk/net/src/**/bin/
-trunk/net/src/**/obj/
-sample/**/trunk/net/src/**/bin/
-sample/**/trunk/net/src/**/obj/
+trunk/src/**/bin/
+trunk/src/**/obj/
+sample/**/trunk/src/**/bin/
+sample/**/trunk/src/**/obj/
 out/
 bin/
 obj/
@@ -15,10 +15,10 @@ obj/
 #############################################################
 #             ReSharper Auto Generated Files
 #############################################################
-trunk/net/src/_[Rr]e[Ss]harper*
-trunk/net/src/**/_ReSharper.*
+trunk/src/_[Rr]e[Ss]harper*
+trunk/src/**/_ReSharper.*
 *.[Rr]e[Ss]harper.user
-trunk/net/src/Ohio.*.ReSharper
+trunk/src/Ohio.*.ReSharper
 *.DotSettings.user
 
 #############################################################
