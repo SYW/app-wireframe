@@ -7,7 +7,6 @@ namespace Platform.Client.Common
 {
 	public class SignatureBuilder
 	{
-		private readonly HashAlgorithm _hashAlgorithm = SHA256.Create();
 		private readonly List<byte> _input = new List<byte>();
 
 		public SignatureBuilder Append(IList<byte> bytes)
@@ -18,7 +17,8 @@ namespace Platform.Client.Common
 
 		public string Create()
 		{
-			return _hashAlgorithm.ComputeHash(_input.ToArray()).ToHexString().ToLower();
+			var hashAlgorithm = SHA256.Create();
+			return hashAlgorithm.ComputeHash(_input.ToArray()).ToHexString().ToLower();
 		}
 	}
 
