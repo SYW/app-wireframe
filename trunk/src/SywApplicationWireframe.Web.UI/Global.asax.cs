@@ -13,6 +13,7 @@ namespace SywApplicationWireframe.Web.UI
 		{
 			filters.Add(new HandleErrorAttribute());
 			filters.Add(new TokenExtractingFilter());
+			filters.Add(new TokenPersistenceFilter());
 		}
 
 		public static void RegisterRoutes(RouteCollection routes)

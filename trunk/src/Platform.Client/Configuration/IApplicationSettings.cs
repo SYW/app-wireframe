@@ -4,5 +4,6 @@ namespace Platform.Client.Configuration
 	{
 		long AppId { get; }
 		string AppSecret { get; }
+		string CookieName { get; }
 	}
 }

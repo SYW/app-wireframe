@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LandingController.cs" />
+    <Compile Include="Filters\TokenPersistenceFilter.cs" />
     <Compile Include="Views\Shared\LoginController.cs" />
     <Compile Include="Controllers\PostLoginController.cs" />
     <Compile Include="Filters\TokenExtractorFilter.cs" />
