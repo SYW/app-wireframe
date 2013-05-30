@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
+using Platform.Client.Common.Exceptions;
 using SywApplicationWireframe.Web.UI.Filters;
 
 namespace SywApplicationWireframe.Web.UI
@@ -11,7 +12,8 @@ namespace SywApplicationWireframe.Web.UI
 	{
 		public static void RegisterGlobalFilters(GlobalFilterCollection filters)
 		{
-			filters.Add(new HandleErrorAttribute());
+			filters.Add(new HandleErrorAttribute{Order=1});
+			filters.Add(new HandleErrorAttribute{Order=2,ExceptionType=typeof(InvalidTokenException), View="Refresh"});
 			filters.Add(new TokenExtractingFilter());
 			filters.Add(new TokenPersistenceFilter());
 		}

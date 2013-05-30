@@ -95,6 +95,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <None Include="static\js\jquery-1.7.1.intellisense.js" />
+    <Content Include="static\js\refresh-page.js" />
     <Content Include="static\js\jquery-1.7.1.js" />
     <Content Include="static\js\jquery-1.7.1.min.js" />
     <None Include="static\js\jquery.validate-vsdoc.js" />
@@ -129,6 +130,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\PostLogin\Index.cshtml" />
+    <Content Include="Views\Shared\Refresh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

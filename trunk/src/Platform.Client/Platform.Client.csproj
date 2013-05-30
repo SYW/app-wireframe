@@ -46,6 +46,7 @@
     <Compile Include="Common\Context\IContextProvider.cs" />
     <Compile Include="Common\Context\ThreadContextProvider.cs" />
     <Compile Include="Common\DateTimeExtensions.cs" />
+    <Compile Include="Common\Exceptions\InvalidTokenException.cs" />
     <Compile Include="Common\ParametersTranslator.cs" />
     <Compile Include="Common\SignatureBuilder.cs" />
     <Compile Include="Common\WebClient\IWebClient.cs" />

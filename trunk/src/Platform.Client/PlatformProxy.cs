@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using Newtonsoft.Json;
 using Platform.Client.Common;
+using Platform.Client.Common.Exceptions;
 using Platform.Client.Common.WebClient;
 using Platform.Client.Configuration;
 
@@ -118,8 +119,11 @@ namespace Platform.Client
 			try
 			{
 				var readError = ReadError(ex);
+				
 				var errorDto = JsonConvert.DeserializeObject<RequestExceptionDto>(readError).Error;
-
+				if (errorDto.StatusCode == 401)
+					return new InvalidTokenException(ex);
+				
 				return new RequestException(errorDto.StatusCode, errorDto.Message, errorDto.RequestId, ex);
 			}
 			catch (Exception)
