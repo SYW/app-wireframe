@@ -21,17 +21,17 @@ namespace SywApplicationWireframe.Domain.Users
 
 		public UserDto Current()
 		{
-			return Call<UserDto>("current");
+			return Get<UserDto>("current");
 		}
 
 		public IList<UserDto> Get(IList<long> userIds)
 		{
-			return Call<IList<UserDto>>("get", new {Ids = userIds});
+			return Get<IList<UserDto>>("get", new {Ids = userIds});
 		}
 
 		public IList<UserDto> GetFollowing(long userId)
 		{
-			var ids = Call<IList<long>>("followed-by", new {UserId = userId});
+			var ids = Get<IList<long>>("followed-by", new {UserId = userId});
 			return !ids.Any() ? 
 				new UserDto[0] : 
 				Get(ids);

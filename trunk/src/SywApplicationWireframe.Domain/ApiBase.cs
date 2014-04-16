@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Platform.Client;
+﻿using Platform.Client;
 using Platform.Client.Common.Context;
 using SywApplicationWireframe.Domain.Configuration;
-using SywApplicationWireframe.Domain.Users;
 
 namespace SywApplicationWireframe.Domain
 {
@@ -25,9 +22,14 @@ namespace SywApplicationWireframe.Domain
 			return string.Format("/{0}/{1}", BasePath, endpoint);
 		}
 
-		protected T Call<T>(string endpoint, object parametersModel = null)
+		protected T Get<T>(string endpoint, object parametersModel = null)
 		{
 			return Proxy.Get<T>(GetEndpointPath(endpoint), parametersModel);
+		}
+
+		protected T Post<T>(string endpoint, object parametersModel = null)
+		{
+			return Proxy.Post<T>(GetEndpointPath(endpoint), parametersModel);
 		}
 	}
 }
