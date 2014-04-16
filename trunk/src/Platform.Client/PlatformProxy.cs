@@ -35,16 +35,13 @@ namespace Platform.Client
 		private readonly IPlatformHashProvider _platformHashProvider;
 		private readonly IParametersTranslator _parametersTranslator;
 
-		public PlatformProxy(IPlatformSettings platformSettings,
-							IApplicationSettings applicationSettings,
-							IPlatformTokenProvider platformTokenProvider)
+		public PlatformProxy(IApplicationSettings applicationSettings, IWebClientBuilder webClientBuilder, IPlatformSettings platformSettings, IPlatformTokenProvider platformTokenProvider, IPlatformHashProvider platformHashProvider, IParametersTranslator parametersTranslator)
 		{
+			_webClientBuilder = webClientBuilder;
 			_platformSettings = platformSettings;
 			_platformTokenProvider = platformTokenProvider;
-
-			_parametersTranslator = new ParametersTranslator();
-			_webClientBuilder = new WebClientBuilder();
-			_platformHashProvider = new PlatformHashProvider(applicationSettings, platformTokenProvider);
+			_platformHashProvider = platformHashProvider;
+			_parametersTranslator = parametersTranslator;
 		}
 
 		public T AnonymousGet<T>(string servicePath, object parametersModel = null)

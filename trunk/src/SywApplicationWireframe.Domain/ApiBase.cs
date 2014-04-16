@@ -1,5 +1,7 @@
 ﻿using Platform.Client;
+using Platform.Client.Common;
 using Platform.Client.Common.Context;
+using Platform.Client.Common.WebClient;
 using SywApplicationWireframe.Domain.Configuration;
 
 namespace SywApplicationWireframe.Domain
@@ -12,9 +14,11 @@ namespace SywApplicationWireframe.Domain
 
 		protected ApiBase(IContextProvider contextProvider)
 		{
-			Proxy = new PlatformProxy(new PlatformSettings(),
-									   new ApplicationSettings(),
-									   new PlatformTokenProvider(contextProvider));
+			var platformTokenProvider = new PlatformTokenProvider(contextProvider);
+			Proxy = new PlatformProxy(new ApplicationSettings(), new WebClientBuilder(), new PlatformSettings(),
+			                          platformTokenProvider,
+			                          new PlatformHashProvider(new ApplicationSettings(), platformTokenProvider),
+			                          new ParametersTranslator());
 		}
 
 		protected string GetEndpointPath(string endpoint)
